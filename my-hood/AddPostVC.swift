@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var titleField: UITextField!
@@ -24,6 +24,17 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
     }
+    
+    //Hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //Presses return key - not used on this app here for reference
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return(true)
+//    }
     
     @IBAction func makePostBtnPressed(_ sender: Any) {
         if let title = titleField.text, let desc = descField.text, let img = postImg.image {
@@ -46,11 +57,8 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         imagePicker.dismiss(animated: true, completion: nil)
-        
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             postImg.image = image
         }
-        
     }
-    
 }

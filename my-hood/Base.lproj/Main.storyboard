@@ -68,19 +68,19 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="88" id="NLX-WR-wDE" customClass="PostCell" customModule="my_hood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="NLX-WR-wDE" id="Kvc-85-DiC">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NLX-WR-wDE" id="Kvc-85-DiC">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="lwh-sN-8OI">
-                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barrel-water-bridge" translatesAutoresizingMaskIntoConstraints="NO" id="lwh-sN-8OI">
+                                                    <rect key="frame" x="8" y="8" width="72" height="72"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="70" id="1rB-p5-PXC"/>
-                                                        <constraint firstAttribute="height" constant="70" id="SA2-3A-muL"/>
+                                                        <constraint firstAttribute="width" constant="72" id="1rB-p5-PXC"/>
+                                                        <constraint firstAttribute="height" constant="72" id="yr7-sr-qNE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Music man needs to go!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpC-gi-5uQ">
-                                                    <rect key="frame" x="92" y="8" width="243" height="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music man needs to go!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpC-gi-5uQ">
+                                                    <rect key="frame" x="88" y="8" width="247" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="19" id="liq-1X-vq0"/>
                                                     </constraints>
@@ -88,8 +88,8 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hey this neighbor is such a punk. He blasts his Korn music way too loud and I'm thinking about burning his house down." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-MB-s1r">
-                                                    <rect key="frame" x="92" y="29" width="243" height="49"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey this neighbor is such a punk. He blasts his Korn music way too loud and I'm thinking about burning his house down." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6fh-MB-s1r">
+                                                    <rect key="frame" x="88" y="30" width="247" height="49"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="49" id="dpy-td-28j"/>
                                                     </constraints>
@@ -101,9 +101,8 @@
                                             <constraints>
                                                 <constraint firstItem="6fh-MB-s1r" firstAttribute="trailing" secondItem="Kvc-85-DiC" secondAttribute="trailingMargin" id="74a-1Z-0vp"/>
                                                 <constraint firstItem="lwh-sN-8OI" firstAttribute="leading" secondItem="Kvc-85-DiC" secondAttribute="leadingMargin" id="Hn9-87-n15"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lwh-sN-8OI" secondAttribute="bottom" id="ake-Kt-wI5"/>
                                                 <constraint firstItem="6fh-MB-s1r" firstAttribute="leading" secondItem="lwh-sN-8OI" secondAttribute="trailing" constant="8" id="eGd-E1-ePI"/>
-                                                <constraint firstItem="lwh-sN-8OI" firstAttribute="top" secondItem="Kvc-85-DiC" secondAttribute="topMargin" id="pjP-5E-cCX"/>
+                                                <constraint firstItem="lwh-sN-8OI" firstAttribute="centerY" secondItem="Kvc-85-DiC" secondAttribute="centerY" id="jEp-PD-JRm"/>
                                                 <constraint firstItem="MpC-gi-5uQ" firstAttribute="top" secondItem="Kvc-85-DiC" secondAttribute="topMargin" id="rJY-gD-Myj"/>
                                                 <constraint firstItem="MpC-gi-5uQ" firstAttribute="leading" secondItem="lwh-sN-8OI" secondAttribute="trailing" constant="8" id="sPY-de-Zm4"/>
                                                 <constraint firstItem="6fh-MB-s1r" firstAttribute="top" secondItem="MpC-gi-5uQ" secondAttribute="bottom" constant="3" id="uhy-r8-4Cf"/>

@@ -37,11 +37,13 @@ class DataService {
         let imgData = UIImagePNGRepresentation(image)
         let imgPath = "image\(NSDate.timeIntervalSinceReferenceDate).png"
         let fullPath = documentsPathForFileName(name: imgPath)
-        let fullURL = URL(fileURLWithPath: "file://\(fullPath)")
+        let fullURL = URL(fileURLWithPath: fullPath)
         
-        //We should handle a failed write after the catch
-        let tryWrite = try? imgData?.write(to: fullURL, options: Data.WritingOptions.atomic)
-
+        //Just basic checking here for this example program
+        if imgData != nil {
+            //We should handle a failed write after the catch
+            let tryWrite = try? imgData?.write(to: fullURL, options: .atomic)
+        }
         return imgPath
     }
     

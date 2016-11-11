@@ -25,7 +25,6 @@ class PostCell: UITableViewCell {
         titleLbl.text = post.title
         descLbl.text = post.postDesc
         postImg.image = DataService.instance.imageForPath(path: post.imagePath)
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,5 +32,4 @@ class PostCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

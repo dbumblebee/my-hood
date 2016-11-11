@@ -17,7 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         DataService.instance.loadPosts()
-        NotificationCenter.default.addObserver(self, selector: "onPostsLoaded:", name: NSNotification.Name(rawValue:"postsLoaded"), object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(onPostsLoaded), name: NSNotification.Name(rawValue:"postsLoaded"), object: nil)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,7 +48,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func onPostsLoaded(notif: AnyObject) {
         tableView.reloadData()
     }
-
-    
 }
 

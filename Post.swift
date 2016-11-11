@@ -33,8 +33,8 @@ class Post: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self._imagePath, forKey : "imagePath")
-        aCoder.encode(self._imagePath, forKey : "title")
-        aCoder.encode(self._imagePath, forKey : "description")
+        aCoder.encode(self._title, forKey : "title")
+        aCoder.encode(self._postDesc, forKey : "description")
     }
     
     var imagePath: String {
